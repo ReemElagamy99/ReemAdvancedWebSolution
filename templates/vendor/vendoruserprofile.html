@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Profile Management - Vendor Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  h1 {
+    color: #333;
+  }
+  .menu {
+    background-color: #3974ad;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+  }
+  .menu a:hover {
+    background-color: #3974ad;
+  }
+  .card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  .card p {
+    color: #666;
+    font-size: 18px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #999;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+  }
+  .icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  .btn {
+    display: inline-block;
+    background-color: #3974ad;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #3974ad;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>User Profile Management - Vendor Dashboard</h1>
+    </div>
+    <div class="menu">
+      <a href="#">Dashboard</a>
+      <a href="#">Products</a>
+      <a href="#">Reports</a>
+      <a href="#">Users</a>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h2><i class="fas fa-user-cog icon"></i>Edit Profile</h2>
+        <p>Edit your personal information.</p>
+        <a href="#" class="btn">Edit Profile</a>
+      </div>
+      <div class="card">
+        <h2><i class="fas fa-lock icon"></i>Change Password</h2>
+        <p>Change your account password.</p>
+        <a href="#" class="btn">Change Password</a>
+      </div>
+      <div class="card">
+        <h2><i class="fas fa-envelope icon"></i>Change Email</h2>
+        <p>Change your account email address.</p>
+        <a href="#" class="btn">Change Email</a>
+      </div>
+      <div class="card">
+        <h2><i class="fas fa-bell icon"></i>Notification Settings</h2>
+        <p>Manage your notification preferences.</p>
+        <a href="#" class="btn">Notification Settings</a>
+      </div>
+    </div>
+    <div class="footer">
+      <p>&copy; 2024 Vendor Management System</p>
+    </div>
+ 

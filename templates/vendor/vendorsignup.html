@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #dde5f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    background: #f1f7fe;
+    border-radius: 30px;
+    box-shadow: 0 0 2em #e6e9f9;
+    padding: 20px;
+    width: 320px;
+    max-height: 80vh; /* Set maximum height with scroll if content exceeds */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds */
+  }
+
+  .welcome {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .input-field {
+    margin-bottom: 20px;
+  }
+
+  .input-field label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  .password .show-hide {
+    display: block;
+    margin-top: 5px;
+    cursor: pointer;
+    color: #3e4684;
+  }
+
+  .login {
+    width: 100%;
+    padding: 10px;
+    background: #3e4684;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  .footer a {
+    text-decoration: none;
+    color: #5e5e5e;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="welcome">
+    Welcome Vendor
+  </div>
+  <div class="input-field">
+    <label>Email</label>
+    <input type="text" placeholder="Enter your email">
+  </div>
+  <div class="input-field">
+    <label>Password</label>
+    <input type="password" placeholder="Enter your password">
+    <span class="show-hide">Show/Hide</span>
+  </div>
+  <div class="input-field">
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter your full name">
+  </div>
+  <div class="input-field">
+    <label>Company Name</label>
+    <input type="text" placeholder="Enter your company name">
+  </div>
+  <div class="input-field">
+    <label>Phone Number</label>
+    <input type="tel" placeholder="Enter your phone number">
+  </div>
+  <button class="login">Sign Up</button>
+  <div class="footer">
+    <a href="#">Forgot Password?</a>
+    <span>|</span>
+    <a href="#">Login</a>
+  </div>
+</div>
+
+<script>
+  const showHideButton = document.querySelector('.show-hide');
+  const passwordInput = document.querySelector('input[type="password"]');
+
+  showHideButton.addEventListener('click', () => {
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+    } else {
+      passwordInput.type = 'password';
+    }
+  });
+</script>
+
+</body>
+</html>

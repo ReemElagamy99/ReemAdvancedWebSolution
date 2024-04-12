@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Sales Report</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .menu {
+      background-color: #3974ad;
+      padding: 10px 0;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+    }
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+    }
+    .menu a:hover {
+      background-color: #3974ad;
+    }
+    .receipt {
+      max-width: 1200px;
+      margin: 80px auto 20px;
+      border: 2px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    .receipt .section {
+      margin-bottom: 10px;
+    }
+    .receipt .section:last-child {
+      margin-bottom: 0;
+    }
+    .receipt h2 {
+      margin: 0;
+      color: #333;
+    }
+    .receipt p {
+      margin: 5px 0;
+      color: #666;
+    }
+    select {
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #3974ad;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #3974ad;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #999;
+      padding-top: 20px;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <a href="#">Home</a>
+    <a href="#">Dashboard</a>
+    <a href="#">Vendors</a>
+    <a href="#">Sales</a>
+    <a href="#">Reports</a>
+    <a href="#">Users</a>
+  </div>
+  <div class="container">
+    <div class="header">
+      <h1>Vendor Sales Report</h1>
+    </div>
+    <div class="receipt">
+      <div class="section">
+        <h2>Report Details</h2>
+        <select name="product" id="product">
+          <option value="">Select Product</option>
+          <option value="product1">Product 1</option>
+          <option value="product2">Product 2</option>
+          <option value="product3">Product 3</option>
+          <!-- Add more options as needed -->
+        </select>
+        <p><strong>Date:</strong> April 12, 2024</p>
+        <p><strong>Vendor:</strong> XYZ Company</p>
+        <p><strong>Report Type:</strong> Monthly Sales</p>
+      </div>
+      <div class="section">
+        <h2>Sales Data</h2>
+        <p><strong>Total Sales:</strong> $10,000</p>
+        <p><strong>Total Products Sold:</strong> 100</p>
+        <p><strong>Average Sale Price:</strong> $100</p>
+      </div>
+      <div class="section">
+        <h2>Download Report</h2>
+        <a href="#" class="btn">Download PDF</a>
+        <a href="#" class="btn">Download Excel</a>
+      </div>
+    </div>
+    <div class="footer">
+      <p>&copy; 2024 Vendor Sales Report</p>
+    </div>
+  </div>
+</body>
+</html>
