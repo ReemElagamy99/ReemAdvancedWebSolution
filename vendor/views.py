@@ -32,13 +32,19 @@ def productsOne(request):
 def reports(request):
       return render(request, 'vendor/reports.html')
 
-def signup(request):
-    username = request.POST.get('username')
-    password = request.POST.get('password')
-    data = Login(username=username, password=password)
-    data.save()
-    return render(request, 'vendor/signup.html')
+# views.py
+from django.shortcuts import render, redirect
 
+def signup(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        # Assuming you are saving this data to a model called Login
+        data = Login(username=username, password=password)
+        data.save()
+        # Redirect to the vendordashboard right after saving
+        return redirect('vendordashboard')
+    return render(request, 'vendor/signup.html')
 
     # Placeholder for vendor dashboard view
     #return HttpResponse('Vendor Dashboard')
