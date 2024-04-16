@@ -12,8 +12,12 @@ def vendorlogin(request):
     #return HttpResponse('Login Page for Vendor')
   return render(request, 'vendor/vendorlogin.html')
 
+# views.py
 def vendordashboard(request):
-      return render(request, 'vendor/vendordashboard.html')
+    username = request.session.get('username', 'Guest')  # Default to 'Guest' if not found
+    context = {'username': username}
+    return render(request, 'vendor/vendordashboard.html', context)
+
 
 def productmanagment(request):
       return render(request, 'vendor/productmanagment.html')
@@ -35,6 +39,9 @@ def reports(request):
 # views.py
 from django.shortcuts import render, redirect
 
+# views.py
+from django.shortcuts import render, redirect
+
 def signup(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -42,9 +49,11 @@ def signup(request):
         # Assuming you are saving this data to a model called Login
         data = Login(username=username, password=password)
         data.save()
-        # Redirect to the vendordashboard right after saving
+        # Store username in session
+        request.session['username'] = username
         return redirect('vendordashboard')
     return render(request, 'vendor/signup.html')
+
 
     # Placeholder for vendor dashboard view
     #return HttpResponse('Vendor Dashboard')
