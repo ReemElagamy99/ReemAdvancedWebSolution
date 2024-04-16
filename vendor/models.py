@@ -1,12 +1,6 @@
 from django.db import models
 
-#beykteb feeh l details l btro7 3al database
 
-# Create your models here.
-
-from django.db import models
-
-#da mogarad gadwal lesa mat7atesh fel database
 class Product(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
@@ -15,3 +9,6 @@ class Product(models.Model):
     image = models.ImageField(upload_to='photos/%y/%m/%d')
     active = models.BooleanField(default=True)
 
+class Login(models.Model):
+    username = models.CharField(max_length=50)
+    password = models.CharField(max_length=50)

@@ -7,3 +7,8 @@ from django.contrib import admin
 from .models import Product
 admin.site.register(Product)
 
+#from .models import Vendor
+#admin.site.register(Vendor)
+
+from .models import Login
+admin.site.register(Login)

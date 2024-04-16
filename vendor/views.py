@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Login
 
 # View functions
 def index(request):
@@ -30,6 +31,15 @@ def productsOne(request):
 
 def reports(request):
       return render(request, 'vendor/reports.html')
+
+def signup(request):
+    username = request.POST.get('username')
+    password = request.POST.get('password')
+    data = Login(username=username, password=password)
+    data.save()
+    return render(request, 'vendor/signup.html')
+
+
     # Placeholder for vendor dashboard view
     #return HttpResponse('Vendor Dashboard')
     
