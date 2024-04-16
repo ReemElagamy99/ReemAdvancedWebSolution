@@ -42,6 +42,9 @@ from django.shortcuts import render, redirect
 # views.py
 from django.shortcuts import render, redirect
 
+# views.py
+from django.shortcuts import render, redirect
+
 def signup(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -53,6 +56,7 @@ def signup(request):
         request.session['username'] = username
         return redirect('vendordashboard')
     return render(request, 'vendor/signup.html')
+
 
 
     # Placeholder for vendor dashboard view
