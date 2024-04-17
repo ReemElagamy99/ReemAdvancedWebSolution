@@ -1,11 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Login
+from .models import Product
 
 # View functions
 def index(request):
     # Renders the index page template
     return render(request, 'vendor/productmanagment.html')
+
+def products_view(request):
+    # Retrieve data from the Product model
+    products = Product.objects.all()
+    return render(request, 'vendor/products.html', {'products': products})
 
 def vendorlogin(request):
     # Placeholder for vendor login view
@@ -56,6 +62,7 @@ def signup(request):
         request.session['username'] = username
         return redirect('vendordashboard')
     return render(request, 'vendor/signup.html')
+
 
 
 

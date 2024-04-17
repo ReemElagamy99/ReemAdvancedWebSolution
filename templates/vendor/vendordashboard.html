@@ -108,7 +108,6 @@
     <div class="menu">
       <a href="{% url 'vendordashboard' %}">Home</a>
       <a href="#">Dashboard</a>
-      <a href="#">Vendors</a>
       <a href="#">Sales</a>
       <a href="{% url 'reports' %}">Reports</a>
       <a href="#">Users</a>
@@ -122,7 +121,7 @@
       <div class="card">
         <h2><i class="fas fa-box-open icon"></i>Product Management</h2>
         <p>View, add, edit, and delete your products.</p>
-        <a href="#" class="btn">Manage Products</a>
+        <a href="{% url 'productmanagment' %}" class="btn">Manage Products</a>
       </div>
       <div class="card">
         <h2><i class="fas fa-chart-line icon"></i>Reports</h2>
@@ -132,12 +131,7 @@
       <div class="card">
         <h2><i class="fas fa-link icon"></i>Vendor Website</h2>
         <p>Visit your original website.</p>
-        <a href="http://www.citisoft.com" class="btn" target="_blank" rel="noopener noreferrer">Visit Website</a>
-      </div>
-      <div class="card">
-        <h2><i class="fas fa-users-cog icon"></i>User Management</h2>
-        <p>Manage user access rights and permissions.</p>
-        <a href="#" class="btn">Manage Users</a>
+        <a href="https://www.ibm.com/watsonx" class="btn" target="_blank" rel="noopener noreferrer">Visit Website</a>
       </div>
       <div class="card">
         <h2><i class="fas fa-chart-bar icon"></i>Sales Management</h2>
