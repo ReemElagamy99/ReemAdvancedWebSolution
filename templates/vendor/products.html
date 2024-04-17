@@ -1,25 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Information</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Information</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .menu {
+      background-color: #3974ad;
+      padding: 10px 0;
+      text-align: center;
+    }
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+    }
+    .menu a:hover {
+      background-color: #3974ad;
+    }
+    .card {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .card p {
+      color: #666;
+      font-size: 18px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #999;
+      padding-top: 20px;
+      border-top: 1px solid #ccc;
+    }
+    .icon {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #3974ad;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #3974ad;
+    }
+  </style>
 </head>
 <body>
-    <h1>Product Information</h1>
-    <ul>
-        {% for product in products %}
-            <li>
-                <h2>{{ product.name }}</h2>
-                <p>Description: {{ product.description }}</p>
-                <p>Price: {{ product.price }}</p>
-                <p>Quantity: {{ product.quantity }}</p>
-                <!-- Add more fields as needed -->
-                <img src="{{ product.image.url }}" alt="{{ product.name }}">
-                <!-- Adjust the image source based on your image field -->
-                <p>Active: {% if product.active %}Yes{% else %}No{% endif %}</p>
-            </li>
-        {% endfor %}
-    </ul>
+  <div class="container">
+    <div class="header">
+      <h1>Vendor Management System</h1>
+      <div class="welcome-message">Welcome, {{ username }}!</div>
+    </div>
+    <div class="menu">
+      <a href="{% url 'vendordashboard' %}">Home</a>
+      <a href="#">Dashboard</a>
+      <a href="#">Sales</a>
+      <a href="{% url 'reports' %}">Reports</a>
+      <a href="#">Users</a>
+    </div>
+    <div class="grid">
+      {% for product in products %}
+        <div class="card">
+          <h2>{{ product.name }}</h2>
+          <p>Description: {{ product.description }}</p>
+          <p>Price: {{ product.price }}</p>
+          <p>Quantity: {{ product.quantity }}</p>
+          <p>Active: {% if product.active %}Yes{% else %}No{% endif %}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="footer">
+      <p>&copy; 2024 Vendor Management System</p>
+    </div>
+  </div>
 </body>
 </html>
