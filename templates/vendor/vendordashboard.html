@@ -103,14 +103,14 @@
   <div class="container">
     <div class="header">
       <h1>Vendor Management System</h1>
-      <div class="welcome-message">Welcome, {{ username }}!</div>
+      <div class="welcome-message">Welcome to your Dashboard, {{ username }}!</div>
     </div>
     <div class="menu">
       <a href="{% url 'vendordashboard' %}">Home</a>
       <a href="#">Dashboard</a>
-      <a href="#">Sales</a>
+      <a href="{% url 'sales' %}">Sales</a>
       <a href="{% url 'reports' %}">Reports</a>
-      <a href="#">Users</a>
+      <a href="{% url 'signup' %}">Logout</a>
     </div>
     <div class="grid">
       <div class="card">
@@ -136,7 +136,7 @@
       <div class="card">
         <h2><i class="fas fa-chart-bar icon"></i>Sales Management</h2>
         <p>Track and manage your sales data.</p>
-        <a href="#" class="btn">Manage Sales</a>
+        <a href="{% url 'sales' %}" class="btn">Manage Sales</a>
       </div>
     </div>
     <div class="footer">

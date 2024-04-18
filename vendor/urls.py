@@ -17,6 +17,8 @@ path('vendoruserprofile', views.vendoruserprofile, name='vendoruserprofile'),
 path('signup/', views.signup, name='signup'),
 path('reports', views.reports, name='reports'),
 path('products/', views.products_view, name='products'),
+path('add_product', views.add_product, name='add_product'),
+path('sales', views.sales, name='sales'),
 
 
 #path('reem', views.index, name='index') da ka2eny ba2ool www.123.com/vendors/reem

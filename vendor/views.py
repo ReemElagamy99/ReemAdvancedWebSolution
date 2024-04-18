@@ -2,6 +2,20 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Login
 from .models import Product
+from django.template.loader import get_template
+from django.template.loader import get_template
+from .forms import ProductForm
+
+def add_product(request):
+       return render(request, 'vendor/add_product.html')
+
+
+# View functions
+def sales(request):
+    # Renders the index page template
+    username = request.session.get('username', 'Guest')  # Default to 'Guest' if not found
+    context = {'username': username}
+    return render(request, 'vendor/sales.html')
 
 # View functions
 def index(request):
